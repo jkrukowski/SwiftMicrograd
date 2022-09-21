@@ -85,7 +85,7 @@ func loss(data: InputData, model: MultilayerPerceptron<Double>, alpha: Double = 
         let loadedData = try JSONDecoder().decode(InputData.self, from: data)
         let scaledData = InputData(x: loadedData.x, y: loadedData.y.map { 2 * $0 - 1 })
         do {
-            if let renderPath = renderPath {
+            if let renderPath {
                 try render(inputData: scaledData, renderPath: renderPath)
             }
         } catch {

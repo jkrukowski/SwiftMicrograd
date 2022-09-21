@@ -90,7 +90,7 @@ extension Value: CustomStringConvertible where T: CVarArg {
     }
 }
 
-// MARK: Value > Operation > Addition
+// MARK: Value > Operation > Add
 
 extension Value {
     public static func + (lhs: Value, rhs: Value) -> Value {
@@ -119,7 +119,7 @@ extension Value {
     }
 }
 
-// MARK: Value > Operation > Add
+// MARK: Value > Operation > Sub
 
 extension Value {
     public static func - (lhs: Value, rhs: Value) -> Value {
