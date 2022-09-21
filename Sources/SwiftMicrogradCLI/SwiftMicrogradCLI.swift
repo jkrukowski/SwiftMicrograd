@@ -74,6 +74,9 @@ func loss(data: InputData, model: MultilayerPerceptron<Double>, alpha: Double = 
 }
 
 @main struct SwiftMicrogradCLI: ParsableCommand {
+    @Argument(help: "Number of training steps")
+    var steps: Int = 100
+
     @Argument(help: "Input data render path.")
     var renderPath: String?
 
@@ -100,7 +103,7 @@ func loss(data: InputData, model: MultilayerPerceptron<Double>, alpha: Double = 
             initialValue: Double.random(in: -1 ... 1)
         )
 
-        for k in 0 ..< 100 {
+        for k in 0 ..< steps {
             let (totalLoss, accuracy) = loss(data: scaledData, model: model)
             model.zeroGradient()
             totalLoss.backward()

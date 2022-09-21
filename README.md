@@ -7,9 +7,10 @@ All credits go to the original author.
 ## Usage
 
 ```
-swift-micrograd-cli [<render-path>]
+USAGE: swift-micrograd-cli [<steps>] [<render-path>]
 
 ARGUMENTS:
+  <steps>                 Number of training steps (default: 100)
   <render-path>           Input data render path.
 
 OPTIONS:
